@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 
@@ -80,3 +81,29 @@ h1 {
 #menuList li:hover {
     background-color: #119dcfb2;
 }
+
+/***********************************************************
+************************************************************
+ LE MENU ASIDE GAUCHE 
+ ***********************************************************
+ ***********************************************************/
+ #TheMainAside{
+   padding: 2% 0;
+ }
+ #menuAside {
+    background-color: #f1f5f9;
+    width: 200px;
+ }
+ #TheNavUl {
+    text-align: center;
+    display: inline-block;
+ }
+ .TheNavItems{
+    padding: 15px 30px;
+    border: 2px solid #b361b3;
+    border-radius: 64px 48px 96px  ;
+    margin: 10px 5px;
+ }.TheNavItems:hover{
+    background-color: #bc5abc;
+    color: white;
+ }
