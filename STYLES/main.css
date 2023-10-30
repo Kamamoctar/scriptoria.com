@@ -48,6 +48,9 @@ table {
 	border-spacing: 0;
 }
 
+/* LES VARIABLES */
+
+
 /* mes classes generales */
 .ToutEnMaj {
     text-transform: uppercase;
@@ -147,4 +150,19 @@ h1 {
  }.TheNavItems:hover{
     background-color: #bc5abc;
     color: white;
+ }
+
+
+
+ /* **************************************************
+               THE FOOTER PART
+ *************************************************** */
+ #TheFooter {
+   position: absolute;
+   bottom: 0;
+   padding: 20px 0 20px 0;
+   display: grid;
+   justify-content: center;
+   background-color: #bc5abc;
+   width: 100%;
  }
