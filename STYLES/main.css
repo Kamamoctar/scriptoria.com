@@ -48,9 +48,6 @@ table {
 	border-spacing: 0;
 }
 
-/* LES VARIABLES */
-
-
 /* mes classes generales */
 .ToutEnMaj {
     text-transform: uppercase;
@@ -65,6 +62,86 @@ h1 {
     font-size: 150%;
 }
 
+/* ---------------------------------------------------------
+         GENERALES
+----------------------------------------------------------*/
+:root{
+   --monMaron: #7A4831;
+   --monMaron-variante: #A66E59;
+   --monRose: #F4A7B9;
+   --monRose-variante: #f4a7b93d;
+   --monBleuCiel: #87CEEB;
+   --monBleuCiel-variante: #89cfebcb;
+}
+/* THEME SOMBRE */
+/* Dark theme styles using black and gray, with your colors as accents */
+body.dark-mode {
+   background-color: #121212; /* Very dark gray to black */
+   color: #f4f4f4; /* Slightly off-white for main text */
+}
+
+body.dark-mode #LeTraitNotifModeS {
+   background-color: #1f1f1f; /* Slightly lighter dark shade for top bar */
+}
+
+body.dark-mode #NotifHautGauche,
+body.dark-mode #ModeSombreHautDroit {
+   color: #f4f4f4; /* Slightly off-white for prominent buttons/text */
+}
+
+body.dark-mode #NotifHautGauche:hover {
+  background-color: var(--monMaron);
+}
+
+body.dark-mode #ModeSombreHautDroit:hover {
+  background-color: var(--monMaron);
+}
+
+body.dark-mode #LogoBanniere {
+   background-color: #1f1f1f;
+}
+
+/* body.dark-mode #LogoBanniereimg */
+   /* If needed, use a different logo for dark mode that's more visible against the dark background */
+
+
+body.dark-mode #NomEntiteUser {
+   color: var(--monBleuCiel-variante);
+}
+
+body.dark-mode #PRINCIPALMENU,
+body.dark-mode #menuAside {
+   background-color: #2424242c;
+}
+
+body.dark-mode #menuList li {
+   color: black;
+}
+
+body.dark-mode #menuList li:hover {
+   background-color: #1f1f1f;
+   color: #f4f4f4;
+}
+
+body.dark-mode #TheNavUl .TheNavItems,
+body.dark-mode .TheNavItems {
+   border-color: var(--monBleuCiel);
+   color: #f4f4f4;
+}
+
+body.dark-mode .TheNavItems:hover{
+   background-color: var(--monBleuCiel);
+   color: #121212;
+}
+
+body.dark-mode #TheFooter {
+   background-color: #1f1f1f;
+   color: var(--monRose);
+}
+
+/* Additional dark-mode styles as necessary */
+
+
 /***********************************************************
 ************************************************************
  principal  styles 
@@ -76,27 +153,35 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
+    background-color: var(--monBleuCiel);
  }
 
  #NotifHautGauche {
-    background-color:tomato;
     padding: 2px;
-
+    color: black;
  }
+ #NotifHautGauche:hover {
+   background-color:rgba(255, 99, 71, 0.7);
+   padding: 2px;
+}
  #ModeSombreHautDroit{
-    background-color: black;
     color: ghostwhite;
     padding: 2px;
  }
+ #ModeSombreHautDroit:hover {
+   background-color: rgba(0, 0, 0, 0.7);
+   color: ghostwhite;
+   padding: 2px;
+}
 
  /* le header avec logo */
  #LogoBanniere {
     width: 100%;
     height: 200px;
-    background-color: #b361b3;
+    background-color: white;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
  }
  #LogoBanniereimg {
     height: 90%;
@@ -104,26 +189,31 @@ h1 {
     background-image: url(data:image/png;base64,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);
     background-repeat: no-repeat;
     background-size: contain;
+    cursor: pointer;
  }
 
  #NomEntiteUser {
-    color: black;
+    color: var(--monMaron);
     font-size: 5vh;
     text-align: center;
-    justify-self: baseline
+    justify-self: center;
  }
 #menuList {
     list-style: none;
     display:flex;
     justify-content: space-around;
-    background-color: #11bcfae0;
+    background-color: var(--monBleuCiel);
 }#menuList li {
     text-align: center;
     width: 100%;
     padding: 5px;
+    transition: 0.3s;
 }
 #menuList li:hover {
-    background-color: #b361b3;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    border-top: 1px solid var(--monRose);
 }
 
 /***********************************************************
@@ -145,7 +235,7 @@ h1 {
  .TheNavItems{
     padding: 15px 30px;
     border: 2px solid #b361b3;
-    border-radius: 64px 48px 96px  ;
+    border-radius: 73px 33px 93px;
     margin: 10px 5px;
  }.TheNavItems:hover{
     background-color: #bc5abc;
