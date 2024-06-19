@@ -1,4 +1,4 @@
 # SAE_WEBApp
-Le nom de cette Applicationweb est inconnu pour l'instant.
+## Site de Scriptoria Info
 
 NOM : NAMADOU Moctar Kamakate
