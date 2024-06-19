@@ -1,19 +1,50 @@
-/* Style de base */
-body, h1, h2, p, ul {
+/* Reset CSS pour une base cohérente */
+* {
+   box-sizing: border-box;
    margin: 0;
    padding: 0;
-   list-style: none;
-   font-family: Arial, sans-serif;
 }
 
-/* Header et Navigation */
+body, h1, h2, p, ul, li {
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police plus moderne */
+}
+
+/* Amélioration de la lisibilité globale */
+body {
+  line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+  color: #333; /* Couleur de texte plus douce */
+  background-color: #f4f4f4; /* Fond plus clair pour réduire la fatigue oculaire */
+  padding: 20px; /* Espacement autour du contenu */
+}
+/* GENERAL */
+h1 {
+   font-size: 3rem;
+} h2 {
+   font-size: 2em;
+}
+
+h1, h2 {
+  color: #582900; /* Utilisation de la couleur principale pour les titres */
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: .75rem;
+}
+
+/* Améliorations Header */
 header {
-   background-color: #582900; /* Couleur principale pour le fond de l'en-tête */
-   color: #fff; /* Pour un contraste optimal, le texte en blanc */
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 20px;
+  background-color: #582900;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Plus d'espace autour des éléments */
+  box-shadow: #3e3e3e 0 5px 11px;
 }
 
 nav ul {
@@ -24,19 +55,28 @@ nav ul {
 nav ul li {
    margin-left: 20px;
    padding: 11px 7px;
+   transition: background-color 0.3s ease;
 } nav ul li:hover {
    background-color: #77B5FE;
    border-radius: 50px;
    color: #fff;
 }
 
+
 nav ul li a {
-   text-decoration: none;
-   font-size: 1.5em;
-   color: #FD6C9E; /* Couleur secondaire pour les liens */
-} nav ul li a:hover {
-   color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem; /* Taille légèrement augmentée pour une meilleure clicabilité */
+  color: #FD6C9E;
+  padding: 5px 10px; /* Espacement interne pour un meilleur aspect visuel */
 }
+
+/* Hover des liens plus distinct */
+nav ul li:hover, nav ul li a:hover {
+  background-color: #77B5FE;
+  border-radius: 50px;
+  color: #fff;
+}
+
 
 /* Logo */
 .logo {
@@ -46,21 +86,26 @@ nav ul li a {
    margin-right: auto;
    transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .logo:hover {
    opacity: 0.8;
    transform: scale(1.05);
-   box-shadow: #FD6C9E 0px 3px 20px;
+   box-shadow: #FD6C9E 0px 3px 11px;
 }
 
-/* Banner */
-.banner {
-   color: #000000;
-   text-align: center;
-   padding: 60px 20px;
-   text-transform: uppercase;
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem; /* Espacement entre les colonnes */
+  padding: 1rem;
 }
 
+/* Sections */
+section {
+  padding: 2rem;
+  background-color: #fff; /* Fond blanc pour détacher du fond global */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre pour un effet de profondeur */
+  margin-bottom: 1rem; /* Espacement entre les sections */
+}
 /* Sections */
 section:nth-child(even) {
    padding: 40px 20px;
@@ -69,38 +114,13 @@ section:nth-child(odd) {
    padding: 40px 20px;
 }
 
+
 /* Style de base pour la section contact */
 #contact {
    background-color: #77B5FE; /* Couleur additionnelle pour un fond distinct */
    color: #fff; /* Contraste élevé pour la lisibilité */
    padding: 50px 20px; /* Espacement généreux */
    text-align: center; /* Centrage du contenu */
-}
-
-#contact h2 {
-   margin-bottom: 30px; /* Espacement sous le titre */
-   color: white; /* Utilisation de la couleur secondaire pour le titre */
-}
-
-/* Styles pour le formulaire */
-#contact form {
-   max-width: 500px; /* Largeur maximale pour une meilleure apparence sur grands écrans */
-   margin: 0 auto; /* Centrage du formulaire */
-}
-
-#contact form input, #contact form textarea {
-   width: 100%; /* Utilisation de toute la largeur disponible */
-   padding: 10px; /* Espacement intérieur pour une saisie confortable */
-   margin-bottom: 20px; /* Espacement entre les champs */
-   border: 1px solid #FD6C9E; /* Bordure de couleur secondaire */
-   border-radius: 5px; /* Coins légèrement arrondis */
-   background-color: #fff; /* Fond blanc pour les champs */
-   color: #582900; /* Couleur principale pour le texte */
-}
-
-#contact form input:focus, #contact form textarea:focus {
-   border-color: #77B5FE; /* Couleur additionnelle pour le focus */
-   outline: none; /* Suppression de l'outline par défaut pour une apparence personnalisée */
 }
 
 #contact form button {
@@ -115,28 +135,43 @@ section:nth-child(odd) {
 
 #contact form button:hover {
    background-color: #FD6C9E; /* Changement de couleur au survol */
+   border-radius: 0px 50px 50px 0;
 }
 
-/* Boutons et Appels à l'action */
-button, .btn {
-   background-color: #FD6C9E; /* Couleur secondaire */
-   color: #fff; /* Texte en blanc */
-   border: none;
-   padding: 10px 20px;
-   cursor: pointer;
-   border-radius: 5px; /* Coins arrondis */
-   transition: background-color 0.3s ease;
+/* Améliorations Formulaires */
+input[type="text"], input[type="email"], textarea {
+  width: calc(100% - 22px); /* Ajustement pour le padding */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #FD6C9E;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
-button:hover, .btn:hover {
-   background-color: #77B5FE; /* Couleur additionnelle au survol */
+input[type="submit"], button {
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /* Footer */
 footer {
-   background-color: #582900; /* Couleur principale */
-   color: #fff; /* Texte en blanc */
-   text-align: center;
-   padding: 20px;
-   margin-bottom: -20px;
+  padding: 1rem;
+  margin-bottom: -23px;
+  position: relative;
+  width: 100%;
+  background-color: #582900; /* Couleur principale */
+  color: #fff; /* Texte en blanc */
+  text-align: center;
+} footer h2 {
+   color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  header, nav ul {
+     flex-direction: column;
+  }
+  .logo, nav ul {
+     margin-bottom: 1rem;
+  }
 }
