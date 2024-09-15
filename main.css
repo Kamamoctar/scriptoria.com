@@ -49,3 +49,13 @@ nav ul li a:hover {
   color: var(--secondary-color-dark);
   border-bottom: 3px solid var(--tertiary-color);
 } /*FIN MENU*/
+
+
+
+
+/* ***************Media Query for Mobile Devices********************* */
+@media (max-width: 768px) {
+  #mainHeader {
+    width: 150%;
+  }
+}
