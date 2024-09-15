@@ -1,0 +1,31 @@
+body 
+	{ 
+		background-color: lightslategray;
+}
+
+/*FROSTED GLASS CARD EFFECT*/
+.card {
+	border-radius: 8px;
+	backdrop-filter: blur(20px);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+	border: rgba(255, 255, 255, 0.3);
+}
+
+/*=========================
+MODE SOMBRE PAR PREFERENCE SYSTEME AK MEDIA QUERIES
+=========================*/
+@media (prefers-color-scheme: light){
+  body{
+    background-color: #fff;
+    color: #333;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  body{
+    background-color: #151818;
+    color: #f1f1f1
+  }
+}
+
