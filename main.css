@@ -12,268 +12,138 @@
   --box-Shadow-simple: 0px 0px 7px rgba(0, 0, 0, 0.5);
   --box-Shadow-hover: 0px 13px 43px rgba(0, 0, 0, 0.5);
 }
-.toUppercase {
-  text-transform: uppercase;
-}
 
 body {
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-size);
-  background-color: rgba(119, 182, 254, 0.05); /* Light blue background */
-  color: #000000;
+  color: var(--main-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* ------------------- ANIMATION -------------------- */
-.cercleDeco1 {
-  position: absolute;
-  top: -33px;
-  left: -63px;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  background-color: var(--main-color);
+header {
+  background-color: var(--main-color-dark);
+  padding: 10px 0;
 }
 
-
-
-/* ------------------- FIN ANIMATION -------------------- */
-
-#mainHeader {
-  height: 9vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* MENU */
-nav ul {
+header nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  padding: 0;
 }
 
-nav ul li {
-  margin: 0 20px;
+header nav ul li {
+  margin: 0 15px;
 }
 
-nav ul li a {
-  color: var(--secondary-color);
+header nav ul li a {
+  color: white;
   text-decoration: none;
-  font-size: 33px;
   font-weight: bold;
 }
 
-nav ul li a:hover {
-  color: var(--secondary-color-dark);
-  border-bottom: 3px solid var(--tertiary-color);
-} /*FIN MENU*/
-
-/* SECTION INTRODUCTION */
 #intro {
-  height: 91vh;
-  background-color: white;
+  background-color: var(--main-color-light);
+  color: white;
+  padding: 50px 20px;
   text-align: center;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("ressources/images/bgi.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: fadeIn 1s ease-in-out;
 }
 
-#intro h1 {
-  font-size: 7rem;
-  color: var(--main-color);
-  margin: 33px auto;
-  transition: ease-in-out 0.5s;
+#intro .cercleDeco1 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  margin: 0 auto 20px;
 }
-#intro h1:hover {
-  text-shadow: 0 0 15px var(--secondary-color), 0 0 33px var(--secondary-color),
-    0 0 53px var(--secondary-color), 0 0 133px var(--secondary-color),
-    0 0 233px var(--secondary-color);
-    color: var(--tertiary-color);
+
+#intro h1, #intro h2 {
+  margin: 10px 0;
 }
-#centrerIntro h2 {
-  font-size: var(--H2-title-Sizes);
-  color: var(--secondary-color);
+
+#intro .description {
+  max-width: 600px;
   margin: 0 auto;
-  margin-bottom: 20px;
-  transition: ease-in-out 0.5s;
 }
 
-.description {
-  width: 73vw;
-  margin: 63px auto 0 auto;
-  font-size: 1.5rem;
-  color: rgb(0, 0, 0);
-}
-/* FIN SECTION INTRODUCTION */
-
-/* SECTION SERVICES */
 #services {
-  width: 100%;
-  background-color: #f9f9f9;
-  text-align: center;
-  padding: 20px;
+  padding: 50px 20px;
 }
 
 #services article {
-  margin-bottom: 10rem;
+  margin-bottom: 50px;
 }
-#services article header {
-  margin-bottom: 5rem;
+
+#services header h1 {
   font-size: var(--H1-title-Sizes);
+  color: var(--main-color);
+  text-align: center;
 }
 
-
-/* Main content styles */
-
-.mainServices > h2 {
+.mainServices h2 {
   font-size: var(--H2-title-Sizes);
-  margin-bottom: 10px;
+  color: var(--secondary-color-dark);
+  display: flex;
+  align-items: center;
 }
-.mainServices > h2 img {
-  width: 53px;
-  height: 53px;
-  margin-right: 10px;  
+
+.mainServices h2 img {
+  margin-right: 10px;
 }
 
 .ContainerServices {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-
-/* -------------------------CARDS------------------------- */
 .service {
-  /* Add a box shadow to give it a card-like effect */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-  /* Add some padding to make the content breathe */
+  background-color: white;
+  box-shadow: var(--box-Shadow-simple);
   padding: 20px;
-  
-  /* Add a border to define the card boundaries */
-  border: 1px solid #ddd;
-  
-  /* Make it a block element with a width */
-  display: block;
-  width: 333px; /* adjust the width as needed */
-  
-  /* Center the card horizontally */
-  margin: 20px auto;
-  
-  /* Add some radius to give it a smooth edge */
-  border-radius: 10px;
-  
-  /* Add a background color to give it a card-like appearance */
-  background-color: #fff;
-  padding: 20px;
-  margin: 10px auto;
-  flex: 1 1 30%; /* Responsive service boxes */
-  max-width: 333px; /* Max width for each service */
+  margin: 10px;
+  width: calc(33% - 40px);
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
 }
+
 .service:hover {
-  border: 1px solid #ff80ab;
-  box-shadow: 0 0 5px var(--tertiary-color), 0 0 23px var(--tertiary-color),
-  0 0 43px var(--tertiary-color), 0 0 123px var(--tertiary-color),
-  0 0 133px var(--secondary-color);
+  box-shadow: var(--box-Shadow-hover);
 }
 
 .service h2 {
-  /* Make the heading stand out */
-  font-weight: bold;
-  margin-top: 0;
+  color: var(--main-color-dark);
 }
 
 .service small {
-  /* Make the small text smaller and less prominent */
-  font-size: 14px;
-  color: #666;
-  border-bottom: 1px solid var(--tertiary-color);
+  color: var(--tertiary-color);
 }
 
-.service p {
-  /* Add some margin to separate the paragraph from the heading */
-  margin-top: 10px;
-  text-align: justify;
-  line-height: 1.5
-}
-/* FIN Card styles */
-
-/* FIN SECTION SERVICES */
-
-
-/* SECTION CONTACT */
 #contacts {
-  background-color: var(--main-color); /* light gray background */
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 13px 13px 0px 0px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: -10px;
-  height: 50vh;
-}
-
-#contacts article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 50px 20px;
   text-align: center;
 }
 
-#contacts article header {
-  margin-bottom: 10px;
-}
-
-#contacts article header h1 {
-  font-size: var(--H1-title-Sizes);
-  font-weight: bold;
-  color: white;
-}
-
-#contacts article p {
-  margin-bottom: 20px;
-  font-size: 18px;
-  color: #666;
-}
-
-#contacts article address {
+#contacts address {
   font-style: normal;
 }
 
-#contacts article address p {
-  margin-bottom: var(--font-size);
-}
-
-#contacts article address a {
+#contacts a {
+  color: white;
   text-decoration: none;
-  color: var(--tertiary-color);
 }
-
-#contacts article address a:hover {
-  color: var(--secondary-color);
-}
-
-.phone {
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--tertiary-color);
-}
-/* FIN SECTION CONTACT */
 
 footer {
+  background-color: var(--main-color-dark);
+  color: white;
   text-align: center;
-  padding: 20px;
-  background-color: var(--main-color);
-  color: var(--secondary-color);
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 10px 0;
+}
+
+.toUppercase {
+  text-transform: uppercase;
 }
