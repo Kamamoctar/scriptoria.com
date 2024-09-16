@@ -224,7 +224,7 @@ nav ul li a:hover {
 
 .contact-form .form-label {
   font-size: var(--font-size);
-  color: var(--main-color-dark);
+  color: white;
 }
 
 .contact-form .form-control {
@@ -255,7 +255,14 @@ nav ul li a:hover {
 
 
 
-
+footer {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: var(--font-size);
+}
 
 
 
