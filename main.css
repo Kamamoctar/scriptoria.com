@@ -62,7 +62,6 @@ nav ul li a:hover {
 
 /* SECTION INTRODUCTION */
 #intro {
-  height: 91vh;
   width: 100%;
   background-color: white;
   text-align: center;
@@ -87,6 +86,10 @@ nav ul li a:hover {
     0 0 53px var(--secondary-color), 0 0 133px var(--secondary-color),
     0 0 233px var(--secondary-color);
   color: var(--tertiary-color);
+}
+#centrerIntro {
+  width: 73vw;
+  margin: 0 auto;
 }
 #centrerIntro h2 {
   font-size: var(--H2-title-Sizes);
@@ -271,20 +274,25 @@ footer {
 
 /* -------------- Media Query for Mobile Devices ---------------- */
 @media (max-width: 768px) {
-  /* ------------------- ANIMATION -------------------- */
-  #intro {
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+   #MsgBienvenu {
+    font-size: 5rem;
+    color: var(--secondary-color);
+    margin: 0 auto;
+    transition: ease-in-out 0.7s;
   }
-
+  
   #centrerIntro h2 {
     font-size: 1.1rem;
     color: var(--secondary-color);
     margin: 0 auto;
     margin-bottom: 20px;
     transition: ease-in-out 0.7s;
+  }
+
+  .description {
+    margin: 63px auto 63px auto;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
   }
 
 

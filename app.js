@@ -1,5 +1,5 @@
 new Typewriter('#typewriter', {
-    strings: ['Vos documents', 'Notre Metier', 'Votre partenaire pour la gestion d\'information'],
+    strings: ['Vos documents', 'Notre Metier', 'Votre partenaire pour la gestion d\'information', 'Ce site est opimise pour Ordinateurs'],
     autoStart: true,
     loop: true,
     cursor: '|*'
