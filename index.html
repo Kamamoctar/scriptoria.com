@@ -2,7 +2,6 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Services</title>
     <link rel="stylesheet" href="reset.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -22,9 +21,8 @@
     </header>
 
     <section id="intro">
-      <div class="cercleDeco1"></div>
       <div id="centrerIntro">
-        <p>——— Bienvenue chez ———</p>
+        <p class="MsgBienvenu">——— Bienvenue chez ———</p>
         <h1 class="toUppercase">Scriptoria</h1>
         <h2 class="toUppercase" id="typewriter" class="Typewriter"></h2>
         <br />
@@ -225,22 +223,30 @@
       </article>
     </section>
 
-    <section id="contacts">
+    <section id="contact">
       <article>
         <header>
           <h1>Nous Contacter</h1>
         </header>
         <br />
-        <p>
-          Si vous avez des questions ou des demandes, n'hésitez pas à nous
-          contacter.
-        </p>
-        <address>
-          <p>
-            <a href="mailto:ScriptoriaDoc@outlook.com">ScriptoriaDoc@outlook.com</a><br><br>
-            <a class="phone" href="tel:+22893470215">+22893470215</a>
-          </p>
-        </address>
+        <main>
+          <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter en remplissant le formulaire ci-dessous :</p>
+          <form action="submit_form.php" method="POST" class="contact-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </main>
       </article>
     </section>
 

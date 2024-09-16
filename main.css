@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* GENERAL STYLES */
 :root {
   --main-color: #582900;
@@ -10,13 +16,9 @@
   --H2-title-Sizes: 25px;
   --font-size: 18px;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.toUppercase {
+  text-transform: uppercase;
 }
-
 body {
   font-family: "Roboto", sans-serif;
   background-color: rgb(0, 0, 0); /* Light blue background */
@@ -24,7 +26,7 @@ body {
   width: 100%;
 }
 
-
+/* HEADER */
 #mainHeader {
   height: 9vh;
   width: 100%;
@@ -33,6 +35,7 @@ body {
   align-items: center;
   background-color: var(--main-color);
 }
+
 /* MENU */
 nav ul {
   list-style: none;
@@ -57,47 +60,10 @@ nav ul li a:hover {
 } /*FIN MENU*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------------------- ANIMATION -------------------- */
-.cercleDeco1 {
-  position: absolute;
-  top: -33px;
-  left: -63px;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  background-color: var(--main-color);
-}
-/* ------------------- FIN ANIMATION -------------------- */
-
-
-
-
-
 /* SECTION INTRODUCTION */
 #intro {
   height: 91vh;
+  width: 100%;
   background-color: white;
   text-align: center;
   padding: 20px;
@@ -108,7 +74,6 @@ nav ul li a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  animation: fadeIn 1s ease-in-out;
 }
 
 #intro h1 {
@@ -121,7 +86,7 @@ nav ul li a:hover {
   text-shadow: 0 0 15px var(--secondary-color), 0 0 33px var(--secondary-color),
     0 0 53px var(--secondary-color), 0 0 133px var(--secondary-color),
     0 0 233px var(--secondary-color);
-    color: var(--tertiary-color);
+  color: var(--tertiary-color);
 }
 #centrerIntro h2 {
   font-size: var(--H2-title-Sizes);
@@ -139,6 +104,7 @@ nav ul li a:hover {
 }
 /* FIN SECTION INTRODUCTION */
 
+
 /* SECTION SERVICES */
 #services {
   width: 100%;
@@ -155,7 +121,6 @@ nav ul li a:hover {
   font-size: var(--H1-title-Sizes);
 }
 
-
 /* Main content styles */
 
 .mainServices > h2 {
@@ -165,7 +130,7 @@ nav ul li a:hover {
 .mainServices > h2 img {
   width: 53px;
   height: 53px;
-  margin-right: 10px;  
+  margin-right: 10px;
 }
 
 .ContainerServices {
@@ -177,28 +142,27 @@ nav ul li a:hover {
   gap: 20px;
 }
 
-
 /* -------------------------CARDS------------------------- */
 .service {
   /* Add a box shadow to give it a card-like effect */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
+
   /* Add some padding to make the content breathe */
   padding: 20px;
-  
+
   /* Add a border to define the card boundaries */
   border: 1px solid #ddd;
-  
+
   /* Make it a block element with a width */
   display: block;
   width: 333px; /* adjust the width as needed */
-  
+
   /* Center the card horizontally */
   margin: 20px auto;
-  
+
   /* Add some radius to give it a smooth edge */
   border-radius: 10px;
-  
+
   /* Add a background color to give it a card-like appearance */
   background-color: #fff;
   padding: 20px;
@@ -209,8 +173,8 @@ nav ul li a:hover {
 .service:hover {
   border: 1px solid #ff80ab;
   box-shadow: 0 0 5px var(--tertiary-color), 0 0 23px var(--tertiary-color),
-  0 0 43px var(--tertiary-color), 0 0 123px var(--tertiary-color),
-  0 0 133px var(--secondary-color);
+    0 0 43px var(--tertiary-color), 0 0 123px var(--tertiary-color),
+    0 0 133px var(--secondary-color);
 }
 
 .service h2 {
@@ -230,7 +194,7 @@ nav ul li a:hover {
   /* Add some margin to separate the paragraph from the heading */
   margin-top: 10px;
   text-align: justify;
-  line-height: 1.5
+  line-height: 1.5;
 }
 /* FIN Card styles */
 
@@ -238,71 +202,55 @@ nav ul li a:hover {
 
 
 /* SECTION CONTACT */
-#contacts {
-  background-color: var(--main-color); /* light gray background */
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 13px 13px 0px 0px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: -10px;
-  height: 50vh;
+#contact {
+  background-color: var(--main-color-light);
+  color: var(--tertiary-color);
+  padding: 40px;
+  border-radius: 8px;
+  margin: 20px 0;
 }
 
-#contacts article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#contacts article header {
-  margin-bottom: 10px;
-}
-
-#contacts article header h1 {
+#contact h1 {
   font-size: var(--H1-title-Sizes);
-  font-weight: bold;
   color: white;
-}
-
-#contacts article p {
   margin-bottom: 20px;
-  font-size: 18px;
-  color: #666;
-}
-
-#contacts article address {
-  font-style: normal;
-}
-
-#contacts article address p {
-  margin-bottom: var(--font-size);
-}
-
-#contacts article address a {
-  text-decoration: none;
-  color: var(--tertiary-color);
-}
-
-#contacts article address a:hover {
-  color: var(--secondary-color);
-}
-
-.phone {
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--tertiary-color);
-}
-/* FIN SECTION CONTACT */
-
-footer {
   text-align: center;
-  padding: 20px;
-  background-color: var(--main-color);
-  color: var(--secondary-color);
-  position: relative;
-  bottom: 0;
-  width: 100%;
+}
+
+#contact p {
+  font-size: var(--font-size);
+  margin-bottom: 30px;
+}
+
+.contact-form .form-label {
+  font-size: var(--font-size);
+  color: var(--main-color-dark);
+}
+
+.contact-form .form-control {
+  border: 1px solid var(--main-color-dark);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: var(--font-size);
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px var(--secondary-color-dark);
+}
+
+.contact-form button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: var(--font-size);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--secondary-color-dark);
 }
 
 
@@ -314,27 +262,21 @@ footer {
 
 
 
-
-
-
-
-
-
-/* *************** Media Query for Mobile Devices ********************* */
+/* -------------- Media Query for Mobile Devices ---------------- */
 @media (max-width: 768px) {
-  #mainHeader {
-    width: 150%;
-  }
+  /* ------------------- ANIMATION -------------------- */
   #intro {
-    width: 150%;
+    height: 60vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  #services {
-    width: 150%;
-  }
-  #contacts {
-    width: 150%;
-  }
-  footer {
-    width: 150%;
+
+  #centrerIntro h2 {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.7s;
   }
 }
