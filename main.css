@@ -11,10 +11,16 @@
   --font-size: 18px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: rgb(0, 0, 0); /* Light blue background */
-  color: #ffffff;
+  color: #6e6e6e;
   width: 100%;
 }
 
