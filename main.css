@@ -232,6 +232,28 @@ p#MsgBienvenu {
   font-size: var(--font-size);
   margin-bottom: 30px;
 }
+.sideContacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.sideContacts a {
+  color: black;
+  text-decoration: none;
+}
+.sideContacts .fas, .fab {
+  color: white;
+  margin-right: 20px;
+}
+
+.sideContacts .fas:hover, .fab:hover {
+  text-shadow: 0 0 15px var(--secondary-color), 0 0 33px var(--secondary-color),
+  0 0 53px var(--secondary-color), 0 0 133px var(--secondary-color),
+  0 0 233px var(--secondary-color);
+color: var(--tertiary-color);
+}
 
 .contact-form .form-label {
   font-size: var(--font-size);
@@ -264,7 +286,7 @@ p#MsgBienvenu {
   background-color: var(--secondary-color-dark);
 }
 
-
+/* FIN SECTION CONTACT */
 
 footer {
   text-align: center;

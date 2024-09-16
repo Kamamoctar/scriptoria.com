@@ -5,3 +5,7 @@ new Typewriter('#typewriter', {
     cursor: '|*'
 });
 console.log('Marche Aussi');
+
+// COPYRIGHT
+const year = new Date().getFullYear();
+document.querySelector('#year').innerHTML = year
