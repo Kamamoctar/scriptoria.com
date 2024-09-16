@@ -76,7 +76,7 @@ nav ul li a:hover {
 }
 
 #intro h1 {
-  font-size: 7rem;
+  font-size: 7.3rem;
   color: var(--main-color);
   margin: 33px auto;
   transition: ease-in-out 0.5s;
@@ -87,12 +87,20 @@ nav ul li a:hover {
     0 0 233px var(--secondary-color);
   color: var(--tertiary-color);
 }
+
+
+
 #centrerIntro {
   width: 73vw;
   margin: 0 auto;
 }
+p#MsgBienvenu {
+  margin-top: 100px;
+  font-size: 3rem;
+}
+
 #centrerIntro h2 {
-  font-size: var(--H2-title-Sizes);
+  font-size: 2rem;
   color: var(--secondary-color);
   margin: 0 auto;
   margin-bottom: 20px;
@@ -100,10 +108,11 @@ nav ul li a:hover {
 }
 
 .description {
-  width: 73vw;
+  width: auto;
   margin: 63px auto 0 auto;
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   color: rgb(0, 0, 0);
+  text-align: justify;
 }
 /* FIN SECTION INTRODUCTION */
 
@@ -121,27 +130,30 @@ nav ul li a:hover {
 }
 #services article header {
   margin-bottom: 5rem;
-  font-size: var(--H1-title-Sizes);
+}
+#services article header h1 {
+  font-size: 5rem;
+  margin-top: 33px;
 }
 
 /* Main content styles */
 
 .mainServices > h2 {
-  font-size: var(--H2-title-Sizes);
+  font-size: 2.9rem;
   margin-bottom: 10px;
 }
 .mainServices > h2 img {
-  width: 53px;
-  height: 53px;
-  margin-right: 10px;
+  width: 55px;
+  height: 55px;
+  margin-right: 11px;
 }
 
 .ContainerServices {
-  max-width: 1500px;
+  
   margin: 0 auto;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(633px, 1fr));
   gap: 20px;
 }
 
@@ -156,10 +168,6 @@ nav ul li a:hover {
   /* Add a border to define the card boundaries */
   border: 1px solid #ddd;
 
-  /* Make it a block element with a width */
-  display: block;
-  width: 333px; /* adjust the width as needed */
-
   /* Center the card horizontally */
   margin: 20px auto;
 
@@ -169,9 +177,8 @@ nav ul li a:hover {
   /* Add a background color to give it a card-like appearance */
   background-color: #fff;
   padding: 20px;
-  margin: 10px auto;
+  margin: 10px 66px;
   flex: 1 1 30%; /* Responsive service boxes */
-  max-width: 333px; /* Max width for each service */
 }
 .service:hover {
   border: 1px solid #ff80ab;
@@ -182,13 +189,13 @@ nav ul li a:hover {
 
 .service h2 {
   /* Make the heading stand out */
-  font-weight: bold;
+  font-weight: bolder;
   margin-top: 0;
 }
 
 .service small {
   /* Make the small text smaller and less prominent */
-  font-size: 14px;
+  font-size: 1.3rem;
   color: #666;
   border-bottom: 1px solid var(--tertiary-color);
 }
@@ -197,7 +204,8 @@ nav ul li a:hover {
   /* Add some margin to separate the paragraph from the heading */
   margin-top: 10px;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.7;
+  font-size: 33px;
 }
 /* FIN Card styles */
 
@@ -274,12 +282,7 @@ footer {
 
 /* -------------- Media Query for Mobile Devices ---------------- */
 @media (max-width: 768px) {
-   #MsgBienvenu {
-    font-size: 5rem;
-    color: var(--secondary-color);
-    margin: 0 auto;
-    transition: ease-in-out 0.7s;
-  }
+  
   
   #centrerIntro h2 {
     font-size: 1.1rem;
@@ -293,15 +296,5 @@ footer {
     margin: 63px auto 63px auto;
     font-size: 1.5rem;
     color: rgb(0, 0, 0);
-  }
-
-
-
-  .ContainerServices {
-    margin: 0 auto;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(633px, 1fr));
-    gap: 15px;
   }
 }
