@@ -161,7 +161,7 @@ nav ul li a:hover {
   margin: 20px auto;
 
   /* Add some radius to give it a smooth edge */
-  border-radius: 10px;
+  border-radius: 13px 23px 13px 23px;
 
   /* Add a background color to give it a card-like appearance */
   background-color: #fff;
@@ -267,7 +267,7 @@ nav ul li a:hover {
   /* ------------------- ANIMATION -------------------- */
   #intro {
     height: 60vh;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -278,5 +278,15 @@ nav ul li a:hover {
     margin: 0 auto;
     margin-bottom: 20px;
     transition: ease-in-out 0.7s;
+  }
+
+
+
+  .ContainerServices {
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(633px, 1fr));
+    gap: 15px;
   }
 }
